@@ -17,10 +17,10 @@ namespace RazorMVCTutorial
         {
             var host = CreateHostBuilder(args).Build();
 
-            // K
+            //var services = host.Services;
+
             using (var scope = host.Services.CreateScope())
             {
-                // K
                 var services = scope.ServiceProvider;
 
                 try

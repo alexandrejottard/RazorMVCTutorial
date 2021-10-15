@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RazorMVCTutorial.Data;
+using RazorMVCTutorial.Models;
 
 namespace RazorMVCTutorial
 {
@@ -26,6 +27,7 @@ namespace RazorMVCTutorial
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //services.AddScoped<ITotoRepository>(() => new TotoRepository())
 
             services.AddDbContext<MvcMovieContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
