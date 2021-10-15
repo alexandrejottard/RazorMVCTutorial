@@ -27,7 +27,8 @@ namespace RazorMVCTutorial
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //services.AddScoped<ITotoRepository>(() => new TotoRepository())
+            //services.AddScoped<ITotoRepository>(sp => new TotoRepository(DateTime.Now, sp.GetRequiredService<MvcMovieContext>()));
+            //services.AddScoped<ITotoRepository>(sp => ActivatorUtilities.CreateInstance<TotoRepository>(sp, DateTime.Now));
 
             services.AddDbContext<MvcMovieContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));

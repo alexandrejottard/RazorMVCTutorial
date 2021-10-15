@@ -28,7 +28,8 @@ namespace RazorMVCTutorial.Models
                         Title = "When Harry Met Sally",
                         ReleaseDate = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
-                        Price = 7.99M
+                        Price = 7.99M,
+                        Rating = "R"
                     },
 
                     new Movie
