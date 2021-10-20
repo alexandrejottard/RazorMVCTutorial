@@ -19,6 +19,14 @@ namespace RazorMVCTutorial.Controllers
             _context = context;
         }
 
+        //public async Task<IActionResult> Index()
+        //{
+        //    var movies = from m in _context.Movie
+        //                 select m;
+
+        //    return View(await movies.ToListAsync());
+        //}
+
         //// GET: Movies
         //public async Task<IActionResult> Index(string searchString)
         //{
